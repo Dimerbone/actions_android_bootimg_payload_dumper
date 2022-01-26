@@ -1,6 +1,8 @@
 # actions_android_bootimg_payload_dumper
 利用Github Actions云端解包payload.bin并提取boot.img
 
+# 目前可用！
+# 自行fork下去然后改action规则在自己项目运行即可
 
 ## 简介 ##
 这是一个利用github actions云端自动化提取刷机包payload.bin中的boot.img的脚本。

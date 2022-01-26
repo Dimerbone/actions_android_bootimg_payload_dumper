@@ -5,7 +5,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://hugeota.d.miui.com/V12.5.5.0.RKHCNXM/miui_ALIOTH_V12.5.5.0.RKHCNXM_c5a30ac282_11.0.zip
+  ROM_URL: 'https://yun.daxiaamu.com/OnePlus_Roms/%E4%B8%80%E5%8A%A06/%E6%B0%A210.0.11/OnePlus6Hydrogen_22.K.52_OTA_052_all_2107162058_62b4aa.zip'
   TZ: Asia/Shanghai
 
 jobs:
@@ -24,13 +24,6 @@ jobs:
         pip install bsdiff4
         python -m pip install protobuf
 
-    - name: Clean Up Disk Space
-      run: |
-        docker rmi `docker images -q`
-        sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d
-        sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php*
-        sudo -E apt-get -y autoremove --purge
-        sudo -E apt-get clean 
         
     - name: Clone the tools source code
       run: |
